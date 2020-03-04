@@ -1,0 +1,49 @@
+import javax.swing.JOptionPane;
+
+public class Calculadora {
+
+    public static void main(String[] args) {
+        int verif = 1;
+        while (verif == 1) {
+            //Pedir valor
+            String v1 = JOptionPane.showInputDialog("Digite seu primeiro numero p/ calcular");
+            String v2 = JOptionPane.showInputDialog("Digite seu segundo numero p/ calcular");
+            String op = JOptionPane.showInputDialog("Digite o tipo de operacao:\n'+' soma;\n'-' Subtracao;\n'*' Multiplicacao;\n'/' Divisao;");
+            //Converter string p/ int
+            int v11 = Integer.parseInt(v1);
+            int v22 = Integer.parseInt(v2);
+            //calculo
+            int cal;
+            switch (op) {
+                case "*":
+                    cal = v11 * v22;
+                    JOptionPane.showMessageDialog(null, "O resultado Ã© " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                    break;
+                case "/":
+                    if (v22 == 0) {
+                        JOptionPane.showMessageDialog(null, "NÃ£o Ã© possivel divisao por zero! ", "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                    } else {
+                        cal = v11 / v22;
+                        JOptionPane.showMessageDialog(null, "O resultado Ã© " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                    }
+                    break;
+                case "-":
+                    cal = v11 - v22;
+                    JOptionPane.showMessageDialog(null, "O resultado Ã© " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                    break;
+                case "+":
+                    cal = v11 + v22;
+                    JOptionPane.showMessageDialog(null, "O resultado Ã© " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Erro!", "#@!Â¨#$%", JOptionPane.ERROR_MESSAGE);
+            }
+            if (JOptionPane.showConfirmDialog(null, "Deseja continuar ?", "Teste",
+                    JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+                verif = 1;
+            } else {
+                verif = 0;
+            }
+        }
+    }
+}
