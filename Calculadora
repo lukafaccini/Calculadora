@@ -17,23 +17,23 @@ public class Calculadora {
             switch (op) {
                 case "*":
                     cal = v11 * v22;
-                    JOptionPane.showMessageDialog(null, "O resultado Ã© " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "O resultado é " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
                     break;
                 case "/":
                     if (v22 == 0) {
-                        JOptionPane.showMessageDialog(null, "NÃ£o Ã© possivel divisao por zero! ", "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Não é possivel divisao por zero! ", "Calculadora", JOptionPane.PLAIN_MESSAGE);
                     } else {
                         cal = v11 / v22;
-                        JOptionPane.showMessageDialog(null, "O resultado Ã© " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "O resultado é " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
                     }
                     break;
                 case "-":
                     cal = v11 - v22;
-                    JOptionPane.showMessageDialog(null, "O resultado Ã© " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "O resultado é " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
                     break;
                 case "+":
                     cal = v11 + v22;
-                    JOptionPane.showMessageDialog(null, "O resultado Ã© " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "O resultado é " + cal, "Calculadora", JOptionPane.PLAIN_MESSAGE);
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Erro!", "#@!Â¨#$%", JOptionPane.ERROR_MESSAGE);
